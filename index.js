@@ -1,11 +1,11 @@
 console.log(
-    "%c Hello person. Please don't make fun of my code",
+    "%c Hello person interested in my websites code. Please don't make fun of it",
     "font-size: 18px;" +
     getComputedStyle(document.body).getPropertyValue("--accent")
 );
 console.log(
-    "%c 🧃🍟",
-    "font-size: 13px;" +
+    "%c 🧃🍟 - take a drink and a snack",
+    "font-size: 16px;" +
     getComputedStyle(document.body).getPropertyValue("--accent")
 );
 
@@ -55,7 +55,7 @@ function calculateAge(birthDate) {
 
 function updateAge() {
     var ageCountElement = document.getElementById('age-count');
-    var age = calculateAge("2009-09-21");
+    var age = calculateAge("2010-09-21");
     ageCountElement.textContent = age;
 }
 
@@ -87,6 +87,34 @@ document.getElementById('socials-section').addEventListener('mouseenter', functi
 document.getElementById('socials-section').addEventListener('mouseleave', function () {
     document.getElementById('socials').style.border = '3px solid #282828';
     document.querySelectorAll('#socials .section-hr').forEach(function (hr) {
+        hr.style.borderTop = '2px solid #282828';
+    });
+});
+
+document.getElementById('projects-section').addEventListener('mouseenter', function () {
+    document.getElementById('projects').style.border = '3px solid #eb0400';
+    document.querySelectorAll('#about .section-hr').forEach(function (hr) {
+        hr.style.borderTop = '2px solid #eb0400';
+    });
+});
+
+document.getElementById('projects-section').addEventListener('mouseleave', function () {
+    document.getElementById('projects').style.border = '3px solid #282828';
+    document.querySelectorAll('#about .section-hr').forEach(function (hr) {
+        hr.style.borderTop = '2px solid #282828';
+    });
+});
+
+document.getElementById('experience-section').addEventListener('mouseenter', function () {
+    document.getElementById('experience').style.border = '3px solid #eb0400';
+    document.querySelectorAll('#about .section-hr').forEach(function (hr) {
+        hr.style.borderTop = '2px solid #eb0400';
+    });
+});
+
+document.getElementById('experience-section').addEventListener('mouseleave', function () {
+    document.getElementById('experience').style.border = '3px solid #282828';
+    document.querySelectorAll('#about .section-hr').forEach(function (hr) {
         hr.style.borderTop = '2px solid #282828';
     });
 });
